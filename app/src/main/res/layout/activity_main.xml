@@ -66,7 +66,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/spain" />
+                    android:src="@drawable/indinaflag" />
                 <!-- TextView Style Added For Lebel -->
                 <TextView
                     android:id="@+id/tvTeamName"
@@ -156,7 +156,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/brazil" />
+                    android:src="@drawable/pakistan" />
                 <!-- TextView Style Added For Lebel -->
                 <TextView
                     style="@style/stTextViewLabel"
