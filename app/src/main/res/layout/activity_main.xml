@@ -1,18 +1,326 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+<!-- Main LinearLyout ( devide into 3 parts ) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:id="@+id/lvMain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="3">
+    <!-- Linear Layout Part 1-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        android:orientation="vertical">
+        <!-- TextView Style Added For Lebel -->
+        <TextView
+            style="@style/stTextViewLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <!-- TextView Style Added For Lebel -->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- Linear Layout Part 2-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1.3"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/spain" />
+                <!-- TextView Style Added For Lebel -->
+                <TextView
+                    android:id="@+id/tvTeamName"
+                    style="@style/stTextViewLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/teamA" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:orientation="horizontal"
+                android:weightSum="0.99">
+
+                <ImageView
+                    android:id="@+id/imgSubscoreTeamOne"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.33"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/baseline_remove_circle_24" />
+                <!-- TextView Style Added For Custom Text -->
+                <TextView
+                    android:id="@+id/tvScoreTeamOne"
+                    style="@style/stCustomTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.33"
+                    android:text="@string/teamAGoal" />
+
+                <ImageView
+                    android:id="@+id/imgAddscoreTeamOne"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.33"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/baseline_add_circle_24" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <!-- TextView Style Added For Custom Text -->
+        <TextView
+            android:id="@+id/tvScoreTeamOneFinal"
+            style="@style/stCustomTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45"
+            android:text="@string/_3" />
+        <!-- TextView Style Added For Lebel -->
+        <TextView
+            style="@style/stTextViewLabel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:text="@string/difference" />
+        <!-- TextView Style Added For Custom Text -->
+        <TextView
+            android:id="@+id/tvScoreTeamTwoFinal"
+            style="@style/stCustomTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.45"
+            android:text="@string/_4" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1.3"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/brazil" />
+                <!-- TextView Style Added For Lebel -->
+                <TextView
+                    style="@style/stTextViewLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TeamB" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:orientation="horizontal"
+                android:weightSum="0.99">
+
+                <ImageView
+                    android:id="@+id/imgSubscoreTeamTwo"
+
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.33"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/baseline_remove_circle_24" />
+                <!-- TextView Style Added For Custom -->
+                <TextView
+                    android:id="@+id/tvScoreTeamTwo"
+                    style="@style/stCustomTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.33"
+                    android:text="@string/TeamBGoal" />
+
+                <ImageView
+                    android:id="@+id/imgAddscoreTeamTwo"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.33"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/baseline_add_circle_24" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- Linear Layout Part 3-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.1"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <!-- TextView Style Added For Lebel -->
+            <TextView
+                style="@style/stTextViewLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/team_a"></TextView>
+
+            <Switch
+                android:id="@+id/switchChange"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"></Switch>
+            <!-- TextView Style Added For Lebel -->
+            <TextView
+                style="@style/stTextViewLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/team_2"></TextView>
+
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rgScore"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/rbTwoGoal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/_2_goal">
+
+
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/rbThreeGoal"
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/_3_goal">
+
+
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/rbFourGoal"
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/_4_goal">
+
+
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/rbFiveGoal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/_5_goal"></RadioButton>
+
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <!-- Buttom Style Added -->
+            <Button
+                android:id="@+id/btAdd"
+                style="@style/stButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/add_goal"></Button>
+            <!-- Buttom Style Added -->
+            <Button
+                android:id="@+id/btDes"
+                style="@style/stButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/minus_goal"></Button>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
