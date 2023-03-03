@@ -96,14 +96,14 @@ class MainActivity : AppCompatActivity() {
         }
         btAdd!!.setOnClickListener {
             //Add button going to add score
-            fun onClick(v: View?) {
+
                 setNewGoalScore(stTeam, inGoal, "add")
-            }
+
         }
         btDes!!.setOnClickListener {
-            fun onClick(v: View?) {
+
                 setNewGoalScore(stTeam, inGoal, "sub")
-            }
+
         }
         imgAddscoreTeamOne!!.setOnClickListener{
             //add one goal into Team A
@@ -116,33 +116,33 @@ class MainActivity : AppCompatActivity() {
         }
         imgSubscoreTeamOne!!.setOnClickListener {
             //minus one goal into Team A
-            fun onClick(v: View?) {
+
                 val oldScore = tvScoreTeamOne!!.text.toString()
                 val intNewScore = oldScore.toInt() - 1
                 tvScoreTeamOne!!.text = intNewScore.toString()
                 tvScoreTeamOneFinal!!.text = intNewScore.toString()
 
-            }
+
         }
         imgAddscoreTeamTwo!!.setOnClickListener {
             //add one goal into Team B
-            fun onClick(v: View?) {
+
                 val oldScore = tvScoreTeamTwo!!.text.toString()
                 val intNewScore = oldScore.toInt() + 1
                 tvScoreTeamTwo!!.text = intNewScore.toString()
                 tvScoreTeamTwoFinal!!.text = intNewScore.toString()
 
-            }
+
         }
         imgSubscoreTeamTwo!!.setOnClickListener {
-            fun onClick(v: View?) {
+
                 //minus score of team 2
                 val oldScore = tvScoreTeamTwo!!.text.toString()
                 val intNewScore = oldScore.toInt() - 1
                 tvScoreTeamTwo!!.text = intNewScore.toString()
                 tvScoreTeamTwoFinal!!.text = intNewScore.toString()
 
-            }
+
         }
     }
 
