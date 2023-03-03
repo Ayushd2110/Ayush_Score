@@ -59,7 +59,6 @@ class MainActivity : AppCompatActivity() {
         btAdd = findViewById<View>(R.id.btAdd) as Button
         btDes = findViewById<View>(R.id.btDes) as Button
         lvMain = findViewById(R.id.lvMain)
-        //Initiate SharedPref Class
 
         //Enable or Disable night mode
         //Using switch decide which side of teams is selected
