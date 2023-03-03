@@ -9,6 +9,11 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:weightSum="3">
+
+
+
+
+
     <!-- Linear Layout Part 1-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,6 +41,11 @@
 
         </LinearLayout>
     </LinearLayout>
+
+
+
+
+
     <!-- Linear Layout Part 2-->
 
     <LinearLayout
@@ -203,6 +213,11 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+
+
+
+
     <!-- Linear Layout Part 3-->
 
 
