@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Score</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main_live">MainActivityLive</string>
+    <string name="go_amp_live"><![CDATA[GO & Live]]></string>
+    <string name="powerdby_group">PowerdBy group</string>
+    <string name="teamA">INDIA</string>
+    <string name="TeamB">PAKISTAN</string>
+    <string name="teamAGoal">3</string>
+    <string name="TeamBGoal">4</string>
+    <string name="team_a">TEAM INDIA </string>
+    <string name="savedata">Do you want to save Data ?</string>
+    <string name="team_2">TEAM PAKISTAN</string>
+    <string name="title">Hockey World Cup Final Match</string>
+    <string name="add_goal">+ Goal</string>
+    <string name="minus_goal">- Minus Goal</string>
+    <string name="_2_goal">2 Goal</string>
+    <string name="_3_goal">3 Goal</string>
+    <string name="_4_goal">4 Goal</string>
+    <string name="_5_goal">5 Goal</string>
+    <string name="difference">-</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="nightmode">Night Mode</string>
+    <string name="about">About</string>
+</resources>
