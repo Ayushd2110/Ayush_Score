@@ -1,14 +1,10 @@
 package com.ayush.score
 
-import android.content.Intent
 import android.os.Bundle
-import android.text.SpannableString
-import android.text.style.ForegroundColorSpan
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import com.google.android.material.snackbar.Snackbar
 
 
 class MainActivity : AppCompatActivity() {
@@ -32,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     var btAdd: Button? = null
     var inGoal = 2
     var stTeam = "TEAMA"
-    var lvMain: LinearLayout? = null
+    lateinit var lvMain: LinearLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -51,6 +47,8 @@ class MainActivity : AppCompatActivity() {
         imgAddscoreTeamTwo = findViewById<View>(R.id.imgAddscoreTeamTwo) as ImageView
         imgSubscoreTeamTwo = findViewById<View>(R.id.imgSubscoreTeamTwo) as ImageView
         switchChange = findViewById<View>(R.id.switchChange) as Switch
+        swNightMode = findViewById<View>(R.id.swNightMode) as Switch
+        lvMain = findViewById<View>(R.id.lvMain) as LinearLayout
         rbTwoGoal = findViewById<View>(R.id.rbTwoGoal) as RadioButton
         rbThreeGoal = findViewById<View>(R.id.rbThreeGoal) as RadioButton
         rbFourGoal = findViewById<View>(R.id.rbFourGoal) as RadioButton
@@ -69,6 +67,17 @@ class MainActivity : AppCompatActivity() {
             } else {
                 stTeam = "TEAMA"
 
+            }
+        }
+        swNightMode!!.setOnCheckedChangeListener { compoundButton, b ->
+            if (b) {
+                lvMain.setBackgroundColor(resources.getColor(R.color.black))
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+//                SharedPrefManager.putInt("night_mode", 0)
+            } else {
+                lvMain.setBackgroundColor(resources.getColor(R.color.white))
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+//                SharedPrefManager.putInt("night_mode", 1)
             }
         }
         rgScore!!.setOnCheckedChangeListener { group, i ->

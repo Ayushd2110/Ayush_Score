@@ -37,6 +37,27 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <!-- TextView Style Added For Lebel -->
+                <TextView
+                    style="@style/stTextViewLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nightmode" />
+
+                <Switch
+                    android:id="@+id/swNightMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+                </Switch>
+            </LinearLayout>
             <!-- TextView Style Added For Lebel -->
 
         </LinearLayout>
