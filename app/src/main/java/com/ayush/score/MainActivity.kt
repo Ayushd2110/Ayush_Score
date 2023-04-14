@@ -1,10 +1,16 @@
 package com.ayush.score
 
+import android.content.Intent
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import com.google.android.material.snackbar.Snackbar
 
 
 class MainActivity : AppCompatActivity() {
@@ -193,6 +199,51 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        //Get Menu item from menu.xml
+        val menuInflater = menuInflater
+        menuInflater.inflate(R.menu.menu, menu)
+        for (i in 0 until menu.size()) {
+            val item: MenuItem = menu.getItem(i)
+            //Change the menu color from toolbar
+            val spanString = SpannableString(menu.getItem(i).getTitle().toString())
+            spanString.setSpan(
+                ForegroundColorSpan(resources.getColor(R.color.btn_gr_strat)),
+                0,
+                spanString.length,
+                0
+            ) //fix the color to white
+            item.title = spanString
+        }
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.getItemId()) {
+            R.id.nav_about -> {
+                Snackbar.make(
+                    findViewById(android.R.id.content),
+                    "Name :- Ayush,Manush,Darshan \n Student ID :- A00233735,A00242210,A00233176",
 
+
+                    Snackbar.LENGTH_LONG
+                ).setAction(
+                    "Get me a coffee"
+                ) {
+                    Toast.makeText(
+                        this@MainActivity,
+                        "Thankyou , I appreciate that.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }.setActionTextColor(resources.getColor(android.R.color.holo_red_light))
+                    .show()
+                true
+            }
+            R.id.nav_settings -> {
+                startActivity(Intent(this, SettingActivity::class.java))
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
 
 }
